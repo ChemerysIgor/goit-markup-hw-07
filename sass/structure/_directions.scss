@@ -1,4 +1,4 @@
-.directions-list {
+.directions__list {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
@@ -6,16 +6,15 @@
     display: flex;
 }
 
-.directions-item {
+.directions__item {
     position: relative;
     display: block;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
-.directions-item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.directions-title {
+.directions__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -24,7 +23,7 @@
     margin-bottom: 50px;
 }
 
-.direction-text {
+.direction__text {
     font-family: "Roboto";
     font-weight: 700;
     font-size: 14px;
@@ -32,9 +31,7 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--bacground-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
     width: 370px;
     height: 70px;
     background: rgba(47, 48, 58, 0.8);
@@ -42,6 +39,6 @@
     bottom: 0;
 }
 
-.directions-img {
+.directions__img {
     display: block;
 }

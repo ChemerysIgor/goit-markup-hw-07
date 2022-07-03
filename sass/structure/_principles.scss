@@ -2,7 +2,7 @@
     padding-bottom: 0;
 }
 
-.principles-list {
+.principles__list {
     list-style: none;
     display: flex;
     padding-left: 0;
@@ -10,11 +10,11 @@
     margin-bottom: 0;
 }
 
-.principle-item:not(:last-child) {
+.principles__card:not(:last-child) {
     margin-right: 30px;
 }
 
-.principles-title {
+.principles__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -23,33 +23,28 @@
     margin-bottom: 10px;
 }
 
-.principles-text {
+.principles__text {
     font-size: 14px;
     line-height: 1.71;
     color: var(--secondary-text-color);
 }
 
-.principle-icon {
+.principles__icon {
     display: block;
     width: 70px;
     height: 70px;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition();
+    .principles__content:hover>&,
+    .principles__content:focus>& {
+        fill: var(--link-color);
+    }
 }
 
-.principle-icon-block {
+.principles__content {
     margin-bottom: 30px;
     width: 270px;
     height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #f5f4fa;
     border-radius: 4px;
-}
-
-.principle-icon-block:hover>.principle-icon,
-.principle-icon-block:focus>.principle-icon {
-    fill: var(--link-color);
+    @include center;
 }

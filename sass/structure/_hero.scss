@@ -1,4 +1,4 @@
-.hero-title {
+.hero__title {
     display: inline-block;
     font-weight: 900;
     font-size: 44px;
@@ -19,7 +19,7 @@
     height: 600px;
 }
 
-.hero-content {
+.hero__content {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -30,7 +30,7 @@
     background-size: cover;
 }
 
-.hero-btn {
+.hero__btn {
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -50,9 +50,8 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-btn:hover,
-.hero-btn:focus {
-    background-color: #188ce8;
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
 }
